@@ -31,11 +31,11 @@ def make_originality_ai_request(text: str, api_key: str):
 
 
 
-def get_ai_score(text: str, api_key: str):
+def get_originality_ai_score(text: str, api_key: str):
     full_response = make_originality_ai_request(text, api_key)
     try:
         score = full_response.get('score').get('ai')
         return score
     except:
-        None
+        return 0
 
