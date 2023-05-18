@@ -1,7 +1,6 @@
 import originality_ai
 import seon
 
-URL = 'https://www.adverts.ie/member/456631/feedback/page-8'
 
 originality_api_key = 'i7h8mkczvloynfp364eq0a5ujrdxbt2g'
 seon_api_key = "51e9a24b-53f5-42db-9935-cb24cd8f3a3f"
@@ -15,3 +14,4 @@ def make_review_score(originality_api_key, seon_api_key, URL):
         return 1
     else:
         return 0
+
