@@ -1,6 +1,10 @@
 import requests
+import scraper
 
-def make_originality_ai_request(text: str, api_key: str):
+
+def make_originality_ai_request(URL: str, api_key: str):
+
+    text = scraper.get_review_corpus(URL)
 
     # Specify the API endpoint URL
     url = 'https://api.originality.ai/api/v1/scan/ai'
@@ -31,8 +35,8 @@ def make_originality_ai_request(text: str, api_key: str):
 
 
 
-def get_originality_ai_score(text: str, api_key: str):
-    full_response = make_originality_ai_request(text, api_key)
+def get_originality_ai_score(URL: str, api_key: str):
+    full_response = make_originality_ai_request(URL, api_key)
     try:
         score = full_response.get('score').get('ai')
         return score

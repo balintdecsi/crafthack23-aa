@@ -1,7 +1,12 @@
 import requests
 import json
+import scraper
 
-def get_seon_fraud_score(api_key, email = "", user_name = "",  phone_number = ""):
+def get_seon_fraud_score(api_key, URL):
+    
+    user_name = scraper.get_user_name(URL)
+    
+    
     headers = {
       "X-API-KEY": api_key
     }
@@ -29,7 +34,7 @@ def get_seon_fraud_score(api_key, email = "", user_name = "",  phone_number = ""
         "action_type": "account_register",
         "affiliate_id": "",
         "affiliate_name": "",
-        "email": email,
+        "email": "",
         "email_domain": "",
         "password_hash": "",
         "user_fullname": "",
@@ -47,7 +52,7 @@ def get_seon_fraud_score(api_key, email = "", user_name = "",  phone_number = ""
         "user_street": "",
         "user_street2": "",
         "session": "",
-        "phone_number": phone_number,
+        "phone_number": "",
         "transaction_type": "",
         "bonus_campaign_id": "",
         "merchant_id": "",
