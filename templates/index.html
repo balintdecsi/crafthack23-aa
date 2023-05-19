@@ -1,11 +1,10 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    {% if result == "0": %}
-        <h2>TRU</h2>
-    {% else %}
-        <h2>SUS</h2>
-    {% endif %}
+    <h1>{% block title %} Profile rating {% endblock %}</h1>
+    {% for message in messages %}
+        <div class='message'>
+            <h3>{{ message['content'] }}</h3>
+        </div>
+    {% endfor %}
 {% endblock %}
-
-
