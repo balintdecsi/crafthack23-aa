@@ -18,7 +18,7 @@ def create():
         content = request.form['content']
 
         if not content:
-            flash('Content is required!')
+            flash('Please provide a valid URL!')
         # elif 'https' not in content:
         #     flash('Content must have https in it!')
         else:
