@@ -18,7 +18,7 @@ def create():
 
         if not content:
             flash('Please provide a valid URL!')
-        elif content.startswith('https://') == False: 
+        elif not content.startswith('https://'): 
             flash('Connection is not secure! Please provide a secure URL!')
         else:
             if make_review_score(originality_api_key, seon_api_key, content) == 1:
