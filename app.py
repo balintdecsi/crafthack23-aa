@@ -22,9 +22,9 @@ def create():
         #     flash('Content must have https in it!')
         else:
             if make_review_score(originality_api_key, seon_api_key, content) == 1:
-                messages[0] = 'SUS'
+                messages[0] = '1'
             else:
-                messages[0] = 'TRU'
+                messages[0] = '0'
             return redirect(url_for('index'))
 
     return render_template('create.html')
