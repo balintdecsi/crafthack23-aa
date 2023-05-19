@@ -41,10 +41,21 @@ export FLASK_ENV=development
 flask run
 ```
 
+Please reach to us for our custom API keys or set yours in the environment variables:
+```bash
+export seon_api_key=[YOUR-SEON-KEY]
+export  originality_api_key=[YOUR-ORIG-KEY]
+```
+
 ## Usage of the product
 
-The best way to get familiar with our product is to wartch our submission video:
+Opening our site you find the following friendly UI:
+
+![](images\front_page.png)
+
+The best way to get familiar with our product is to watch our submission video:
 [trueSeller submission](https://www.example.com)
 
 ## The AA-Team
 
+Advanced Analytics, not something else. We are a diverse group of young professionals who come from different backgrounds but share a strong bond. Despite being a relatively new team, we work together smoothly. Laughter and a positive work atmosphere are integral to our team culture, fostering a supportive environment where everyone thrives. Our motto is: One pun a day keep the doctor away.
