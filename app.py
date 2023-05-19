@@ -21,10 +21,7 @@ def create():
         # elif 'https' not in content:
         #     flash('Content must have https in it!')
         else:
-            messages[0] = {
-                'content':
-                    'Based on language processing and profile validation, the "truth score" for the listing is' +
-                    str(make_review_score(originality_api_key, seon_api_key, content))}
+            messages[0] = {'content': make_review_score(originality_api_key, seon_api_key, content)}
             return redirect(url_for('index'))
 
     return render_template('create.html')
