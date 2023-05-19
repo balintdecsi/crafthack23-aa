@@ -1,6 +1,6 @@
 import requests
 import json
-import scraper
+from dev.src import scraper
 
 def get_seon_fraud_score(api_key, URL):
     

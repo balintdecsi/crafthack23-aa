@@ -1,8 +1,9 @@
 from flask import Flask, render_template, request, url_for, flash, redirect
-from dev.src.seon import get_user_score
+from dev.src.scoring import make_review_score, originality_api_key, seon_api_key
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'b5050c392097268742d148b8dfc7afb646a629a83d75c660'
+
 
 messages = [{'content': 'Message One Content'}]
 
@@ -20,7 +21,10 @@ def create():
         # elif 'https' not in content:
         #     flash('Content must have https in it!')
         else:
-            messages[0] = {'content': [-1, 1]}
+            messages[0] = {
+                'content':
+                    'Based on language processing and profile validation, the "truth score" for the listing is' +
+                    str(make_review_score(originality_api_key, seon_api_key, content))}
             return redirect(url_for('index'))
 
     return render_template('create.html')

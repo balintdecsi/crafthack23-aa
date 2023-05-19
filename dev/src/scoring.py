@@ -1,5 +1,5 @@
-import originality_ai
-import seon
+from dev.src import originality_ai
+from dev.src import seon
 
 
 originality_api_key = 'i7h8mkczvloynfp364eq0a5ujrdxbt2g'

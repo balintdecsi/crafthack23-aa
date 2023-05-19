@@ -1,5 +1,5 @@
 import requests
-import scraper
+from dev.src import scraper
 
 
 def make_originality_ai_request(URL: str, api_key: str):
