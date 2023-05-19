@@ -1,20 +1,21 @@
-![](truSeller-high-resolution-color-logo.png)
-=======================
+![logo](./images/truseller.png)
+==================
 
 ## Intro
 Introducing **truSeller**: Empowering online marketplaces to combat scammers with AI and SEON's tools. **truSeller** uses advanced AI algorithms to detect suspicious profiles and protects users from potential scams. Integrated with SEON's fraud detection features, it builds holistic user profiles for evaluating trustworthiness. With a user-friendly interface and simple yet robust scoring, **truSeller** strengthens marketplace security, fostering trust between buyers and sellers. Join the fight against scammers with **truSeller** and create a safer digital marketplace ecosystem.
+
 
 ## Features
 
 ### 1. SEON's API
 
-![](images\seon_logo.png)
+![](./images/seon_logo.png)
 
 SEON's proprietary API combines the seller's email, phone number, IP, and AML APIs with device fingerprinting so that we can request and receive its enriched data, rules, and scoring in a single API call.
 
 ### 2. Originality AI model capabilities
 
-![](images\originality_ai.png)
+![](images/originality_ai.png)
 
 After corpus aggregation, we call Originality AI's custom API for detection of fraud-positive text. With this, we leverage a custom pre-trained model's predictions on a new problem.
 
@@ -51,7 +52,7 @@ export  originality_api_key=[YOUR-ORIG-KEY]
 
 Opening our site you find the following friendly UI:
 
-![](images\front_page.png)
+![](images/front_page.png)
 
 The best way to get familiar with our product is to watch our submission video:
 [trueSeller submission](https://www.example.com)
