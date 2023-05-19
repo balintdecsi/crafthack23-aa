@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>{% block title %} {% endblock %} - TruSell</title>
@@ -7,7 +8,7 @@
         body {
             font-family: Arial, sans-serif;
             background-color: #FFFFFF;
-            background-image: url("truseller-low-resolution-color-logo.png");
+            background-image: url("C:/Users/fanni.mate/OneDrive - Vodafone Group/Documents/crafthack23-aa/truseller-low-resolution-color-logo.png");
             background-position: top left;
             background-repeat: no-repeat;
             position: static;
@@ -18,33 +19,30 @@
             text-align: center;
             color: #1EBBD7;
         }
-      
-        h5 {
+
+        h2 {
             text-align: center;
             color: #3a494a
         }
-      
-        textarea, button {
+
+        textarea {
             display: block;
             margin: 100px auto;
         }
 
-        button {
-          padding: 5px 10px;
-          background-color: #1EBBD7;
-          color: #FFFFFF
+        nav a button {
+            background-color: #1EBBD7;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            margin: auto 250px ;
         }
-      
+
         .message {
             padding: 10px;
             margin: 5px;
             background-color: #f3f3f3
-        }
-        nav a {
-            margin: 100px auto;
-            padding: 5px 10px;
-            background-color: #1EBBD7;
-            color: #FFFFFF
         }
 
         .alert {
@@ -54,22 +52,29 @@
             background-color: #e0fdff;
         }
 
+        .content {
+            width: 20%;
+            margin-top: 200px;
+        }
     </style>
 </head>
+
 <body>
-    <hr>
+    <header>
+        <nav>
+            <a href="{{ url_for('base') }}">
+                <button type= "submit" class= "button button_newpage">New page</button></a>
+            <a href="{{ url_for('create') }}">
+                <button type= "submit" class= "button button_check">Check a page!</button></a> 
+        </nav>
+    </header>
     <div class="content">
         {% for message in get_flashed_messages() %}
-            <div class="alert">{{ message }}</div>
+        <div class="alert">{{ message }}</div>
         {% endfor %}
         {% block content %} {% endblock %}
     </div>
-    <nav>
-        <a href="{{ url_for('base') }}">
-            <button type="submit" name="button_newpage">New page</button></a>
-        </a>
-        <a href="{{ url_for('create') }}">            
-            <button type="submit" name="button_check">Check it!</button></a>
-        </nav>
+
 </body>
+
 </html>
