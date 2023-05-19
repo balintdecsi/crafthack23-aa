@@ -1,6 +1,5 @@
-==========================
 
-![](./images/truSeller-high-resolution-color-logo.png)
+![logo](./truSeller-high-resolution-color-logo.png)
 =======================
 
 ## Intro
@@ -53,7 +52,7 @@ export  originality_api_key=[YOUR-ORIG-KEY]
 
 Opening our site you find the following friendly UI:
 
-![](images\front_page.png)
+![](images/front_page.png)
 
 The best way to get familiar with our product is to watch our submission video:
 [trueSeller submission](https://www.example.com)
