@@ -10,11 +10,7 @@ messages = [{'content': "-1"},
 
 @app.route('/')
 def index():
-    return render_template('base.html')
-
-@app.route('/output/', methods=('GET', 'POST'))
-def output():
-    return render_template('output.html', messages=messages)
+    return render_template('index.html', messages=messages)
 
 @app.route('/create/', methods=('GET', 'POST'))
 def create():
@@ -27,6 +23,10 @@ def create():
         #     flash('Content must have https in it!')
         else:
             messages.append({'content': get_user_score(content)})
-            return redirect(url_for('base'))
+            return redirect(url_for('index'))
 
     return render_template('create.html')
+
+# @app.route('/output/', methods=('GET', 'POST'))
+# def output():
+#     return render_template('output.html', messages=messages)
