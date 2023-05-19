@@ -2,35 +2,61 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{% block title %} {% endblock %} - FlaskApp</title>
+    <title>{% block title %} {% endblock %} - TruSell</title>
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #FFFFFF;
+            background-image: url("C:/Users/fanni.mate/Documents/crafthack23-aa/truseller-low-resolution-color-logo.png");
+            background-position: top left;
+            background-repeat: no-repeat;
+            position: static;
+            background-size: 250px 200px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #1EBBD7;
+        }
+      
+        h5 {
+            text-align: center;
+            color: #3a494a
+        }
+      
+        textarea, button {
+            display: block;
+            margin: 100px auto;
+        }
+
+        button {
+          padding: 5px 10px;
+          background-color: #1EBBD7;
+          color: #FFFFFF
+        }
+      
         .message {
             padding: 10px;
             margin: 5px;
             background-color: #f3f3f3
         }
         nav a {
-            color: #d64161;
-            font-size: 3em;
-            margin-left: 50px;
-            text-decoration: none;
+            margin: 100px auto;
+            padding: 5px 10px;
+            background-color: #1EBBD7;
+            color: #FFFFFF
         }
 
         .alert {
             padding: 20px;
             margin: 5px;
             color: #970020;
-            background-color: #ffd5de;
+            background-color: #e0fdff;
         }
 
     </style>
 </head>
 <body>
-    <nav>
-        <a href="{{ url_for('index') }}">FlaskApp</a>
-        <a href="{{ url_for('create') }}">Create</a>
-        <a href="#">About</a>
-    </nav>
     <hr>
     <div class="content">
         {% for message in get_flashed_messages() %}
@@ -38,5 +64,12 @@
         {% endfor %}
         {% block content %} {% endblock %}
     </div>
+    <nav>
+        <a href="{{ url_for('base') }}">
+            <button type="submit" name="button_newpage">New page</button></a>
+        </a>
+        <a href="{{ url_for('output') }}">            
+            <button type="submit" name="button_check">Check it!</button></a>
+        </nav>
 </body>
 </html>
