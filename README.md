@@ -1,4 +1,4 @@
-![](./truSeller-high-resolution-color-logo.png)
+![](./images/truSeller-high-resolution-color-logo.png)
 =======================
 
 ## Intro
@@ -14,7 +14,7 @@ SEON's proprietary API combines the seller's email, phone number, IP, and AML AP
 
 ### 2. Originality AI model capabilities
 
-![](images\originality_ai.png)
+![](images/originality_ai.png)
 
 After corpus aggregation, we call Originality AI's custom API for detection of fraud-positive text. With this, we leverage a custom pre-trained model's predictions on a new problem.
 
