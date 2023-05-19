@@ -10,7 +10,7 @@ def make_review_score(originality_api_key, seon_api_key, URL):
     ai_score = originality_ai.get_originality_ai_score(api_key = originality_api_key, URL = URL)
     seon_score = seon.get_seon_fraud_score(api_key = seon_api_key,  URL = URL)
        
-    if seon_score >= 10 or ai_score >= 0.9:
+    if seon_score >= 10 or ai_score >= 0.1:
         return 1
     else:
         return 0
