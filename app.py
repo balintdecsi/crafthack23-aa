@@ -5,7 +5,7 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = 'b5050c392097268742d148b8dfc7afb646a629a83d75c660'
 
 
-messages = [{'content': 'Message One Content'}]
+messages = [{'content': 'No results yet!'}]
 
 @app.route('/')
 def index():
@@ -18,13 +18,15 @@ def create():
 
         if not content:
             flash('Please provide a valid URL!')
-        # elif 'https' not in content:
-        #     flash('Content must have https in it!')
+        elif content.startswith('https://') == False: 
+            flash('Connection is not secure! Please provide a secure URL!')
         else:
             if make_review_score(originality_api_key, seon_api_key, content) == 1:
                 messages[0] = {'content': 'SUS'}
-            else:
+            elif make_review_score(originality_api_key, seon_api_key, content) == 0:
                 messages[0] = {'content': 'TRU'}
+            else:
+                flash('Website not available!')
             return redirect(url_for('index'))
 
     return render_template('create.html')
