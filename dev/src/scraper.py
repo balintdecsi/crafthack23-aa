@@ -3,10 +3,13 @@ from bs4 import BeautifulSoup
 
 
 def request_url(URL):
+    if "adverts.ie" not in URL:
+        raise ValueError('Website not yet available')
     page = requests.get(URL)
     soup = BeautifulSoup(page.content, "html.parser")
     results = soup.find(id='feedbackcontent')
     return results
+
 
 
 def get_page_number(URL):
@@ -26,6 +29,7 @@ def get_page_number(URL):
                 page_num = str(a[-1])[-11:-10]
     return page_num 
     
+
 
 def get_review_corpus(URL):
     
@@ -55,6 +59,8 @@ def get_user_name(URL):
     soup = BeautifulSoup(page.content, "html.parser")
     results = soup.find(id='profile')
     job_elements = results.find_all("h2", id="username_head")
+    if job_elements==[]:
+        raise ValueError('The user is not verified by the marketplace yet')
     username_element = job_elements[0]  
     username = username_element.text.strip()
     return username 
