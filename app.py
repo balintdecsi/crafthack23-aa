@@ -20,7 +20,7 @@ def create():
         # elif 'https' not in content:
         #     flash('Content must have https in it!')
         else:
-            messages[0] = {'content': 'score for this-1, 1]}
+            messages[0] = {'content': [-1, 1]}
             return redirect(url_for('index'))
 
     return render_template('create.html')
