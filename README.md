@@ -1,4 +1,4 @@
-![](.\truSeller-high-resolution-color-logo.png)
+![](./truSeller-high-resolution-color-logo.png)
 =======================
 
 ## Intro
@@ -8,7 +8,7 @@ Introducing **truSeller**: Empowering online marketplaces to combat scammers wit
 
 ### 1. SEON's API
 
-![](.\images\seon_logo.png)
+![](./images/seon_logo.png)
 
 SEON's proprietary API combines the seller's email, phone number, IP, and AML APIs with device fingerprinting so that we can request and receive its enriched data, rules, and scoring in a single API call.
 
