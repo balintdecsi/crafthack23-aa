@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Search for an ad listing {% endblock %}</h1>
+    <form method="post">
+        <label for="content">URL for listing</label>
+        <br>
+        <textarea name="content"
+                  placeholder="Enter URL here"
+                  rows="1"
+                  cols="60"
+                  >{{ request.form['content'] }}</textarea>
+        <br>
+        <button type="submit">Check it!</button>
+    </form>
+{% endblock %}
