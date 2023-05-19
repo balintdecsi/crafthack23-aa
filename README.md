@@ -55,7 +55,7 @@ Opening our site you find the following friendly UI:
 ![](images/front_page.png)
 
 The best way to get familiar with our product is to watch our submission video:
-[trueSeller submission](https://www.example.com)
+[trueSeller submission](https://youtu.be/bEf-9Hu-0mQ)
 
 ## The AA-Team
 
