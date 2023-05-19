@@ -1,24 +1,29 @@
 import requests
 import json
+from dev.src import scraper
 
-headers = {
-  "X-API-KEY": "51e9a24b-53f5-42db-9935-cb24cd8f3a3f"
-}
-
-def get_user_score(user_name: str) -> str:
+def get_seon_fraud_score(api_key, URL):
+    
+    user_name = scraper.get_user_name(URL)
+    
+    
+    headers = {
+      "X-API-KEY": api_key
+    }
+    
     payload = {
         "config": {
             "ip": {
-            "include": "flags,history,id",
-            "version": "v1.1"
+              "include": "flags,history,id",
+              "version": "v1.1"
             },
             "email": {
-            "include": "flags,history,id",
-            "version": "v2.2"
+              "include": "flags,history,id",
+              "version": "v2.2"
             },
             "phone": {
-            "include": "flags,history,id",
-            "version": "v1.4"
+              "include": "flags,history,id",
+              "version": "v1.4"
             },
             "ip_api": True,
             "email_api": True,
@@ -55,7 +60,13 @@ def get_user_score(user_name: str) -> str:
         "custom_fields": {
         }
     }
-
+    
     response = requests.post('https://api.seon.io/SeonRestService/fraud-api/v2.0', headers=headers,
-                            data=json.dumps(payload))
-    return response.json()['data']['fraud_score']
+                             data=json.dumps(payload))
+    full_response = response.json()
+    
+    try:
+        return full_response.get('data').get('fraud_score')
+    
+    except:
+        return None
