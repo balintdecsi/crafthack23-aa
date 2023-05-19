@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>{% block title %} Add a New Message {% endblock %}</h1>
+    <h1>{% block title %} Search for an ad listing {% endblock %}</h1>
     <form method="post">
-        <label for="content">Message Content</label>
+        <label for="content">URL for listing</label>
         <br>
         <textarea name="content"
-                  placeholder="Message content"
+                  placeholder="Enter URL here"
                   rows="15"
                   cols="60"
                   >{{ request.form['content'] }}</textarea>
