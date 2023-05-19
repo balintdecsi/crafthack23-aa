@@ -2,13 +2,14 @@
 
 {% block content %}
     <h1>{% block title %} Add a URL {% endblock %}</h1>
-    <div class="content">
+    <!-- <div class="content">
         {% for message in get_flashed_messages() %}
             <div class="alert">{{ message }}</div>
         {% endfor %}
         {% block content %} {% endblock %}
-    </div>
+    </div> -->
     <form method="post"></form>
+        <label for="content">Message Content</label>
         <br>
         <textarea name="content"
             placeholder="URL link"

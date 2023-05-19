@@ -27,6 +27,6 @@ def create():
 
     return render_template('create.html')
 
-# @app.route('/output/', methods=('GET', 'POST'))
-# def output():
-#     return render_template('output.html', messages=messages)
+@app.route('/output/', methods=('GET', 'POST'))
+def output():
+    return render_template('output.html', messages=messages)

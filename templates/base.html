@@ -57,6 +57,13 @@
     </style>
 </head>
 <body>
+    <nav>
+        <a href="{{ url_for('index') }}">
+            <button type="submit" name="button_newpage">New page</button></a>
+        </a>
+        <a href="{{ url_for('output') }}">            
+            <button type="submit" name="button_check">Check it!</button></a>
+    </nav>
     <hr>
     <div class="content">
         {% for message in get_flashed_messages() %}
@@ -64,12 +71,5 @@
         {% endfor %}
         {% block content %} {% endblock %}
     </div>
-    <nav>
-        <a href="{{ url_for('base') }}">
-            <button type="submit" name="button_newpage">New page</button></a>
-        </a>
-        <a href="{{ url_for('output') }}">            
-            <button type="submit" name="button_check">Check it!</button></a>
-        </nav>
 </body>
 </html>
