@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "crafthack23-aa"
+description = "Submission for Crafthub's CraftHack 2023 hackathon challange by AA."
+authors = ["balintdecsi <balint.decsi@gmail.com>"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.11"
+requests = "^2.32.3"
+flask = "^3.1.0"
+beautifulsoup4 = "^4.13.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
